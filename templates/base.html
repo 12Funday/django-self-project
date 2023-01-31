@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{judul}} | Belajar Django</title>
+    
+    {% include 'snippets/styles.html' %}
+
+
+</head>
+<body>
+    <!-- Navbar start -->
+    {% include 'snippets/navbar.html' %}
+    <!-- Navbar end -->
+
+    <!-- Content start -->
+    <div class="container">
+      
+    </div>
+    <!-- Content End -->
+
+    <!-- Junbotron start -->
+    <div class="container py-4">
+      <div class="p-5 mb-4 bg-light rounded-3" id="jumbotron">
+        <div class="container-fluid py-5">
+          
+          {% block header %}
+            
+          {% endblock header %}
+            
+
+
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron end -->
+
+    <!-- Konten start -->
+    <div class="container-fluid">
+        <div class="container bg-white text-dark shadow" id="myBody">
+            
+            {% block content-1 %}
+                
+            {% endblock content-1 %}
+                
+        </div>
+
+        <div class="container bg-dark text-white shadow">
+          
+          {% block content-2 %}
+            <div clasblockname
+            blocknames="row" style="height: 400px;">
+                <h1>Konten 2</h1>
+            </div>
+          {% endblock content-2 %}
+            
+        </div>
+
+      
+    </div>
+    <!-- Konten end -->
+
+
+
+
+
+    {% include 'snippets/scripts.html' %}
+
+
+      
+
+</body>
+</html>
